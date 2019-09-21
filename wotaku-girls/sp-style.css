@@ -118,6 +118,7 @@
     font-weight: bold;
     transition: all 0.2s ease;
   }
+
   .tab_item:hover {
     opacity: 0.75;
   }
@@ -139,7 +140,8 @@
   /*選択されているタブのコンテンツのみを表示*/
   #all:checked ~ #all_content,
   #programming:checked ~ #programming_content,
-  #design:checked ~ #design_content {
+  #design:checked ~ #design_content,
+  #test:checked ~ #test_content {
     display: block;
   }
 
@@ -147,5 +149,31 @@
   .tabs input:checked + .tab_item {
     background-color: #5ab4bd;
     color: #fff;
+  }
+
+  #contents {
+    padding: 20px 0;
+  }
+
+  .card {
+    margin: 0 auto 5px;
+    width: 90%;
+    border: 2px solid #cbcec4;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .image {
+    width: 30%;
+    margin: 10px auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .card p {
+    margin: 10px;
   }
 }
