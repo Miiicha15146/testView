@@ -4,7 +4,7 @@ new Vue( {
     posts: []
   },
   created: function(){
-    axios.get( 'http://mykt.wp.xdomain.jp/wp-json/wp/v2/posts' )
+    axios.get( '//mykt.wp.xdomain.jp/wp-json/wp/v2/posts' )
     .then( response => {
       this.posts = response.data;
     } )
