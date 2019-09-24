@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sp-style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <img src="./header.jpg" alt="">
+        <div class="header__menu">
+          <div class="header__menu__line" @click="naviOpen" :class="{'is-active': active}">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+      <transition name="navi">
+        <nav class="navi" v-show="navi">
+          <ul class="navi__wrap">
+            <li><a href="#">AAA</a></li>
+            <li><a href="#">BBB</a></li>
+            <li><a href="#">CCC</a></li>
+            <li><a href="#">DDD</a></li>
+            <li><a href="#">EEE</a></li>
+          </ul>
+        </nav>
+      </transition>
+    </div>
+    <div id="test1">
+      <!-- <ul v-for="post in posts">
+        <li>
+          <a v-bind:href="post.link" target="_blank">
+            {{post.title.rendered}}
+          </a>
+        </li>
+      </ul> -->
+      <ul v-for="post in posts">
+        <li>
+          <a href="./post.html">
+            {{post.title.rendered}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
